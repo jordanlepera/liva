@@ -42,22 +42,6 @@ const Main = (props: IMainProps) => (
               </li>
               <li className="mr-6">
                 <Link
-                  href="/guestbook/"
-                  className="border-none text-gray-700 hover:text-gray-900"
-                >
-                  Guestbook
-                </Link>
-              </li>
-              <li className="mr-6">
-                <Link
-                  href="/portfolio/"
-                  className="border-none text-gray-700 hover:text-gray-900"
-                >
-                  Portfolio
-                </Link>
-              </li>
-              <li className="mr-6">
-                <Link
                   href="/blog/"
                   className="border-none text-gray-700 hover:text-gray-900"
                 >
@@ -71,28 +55,6 @@ const Main = (props: IMainProps) => (
                 >
                   GitHub
                 </a>
-              </li>
-            </ul>
-          </nav>
-
-          <nav>
-            <ul className="flex flex-wrap text-xl">
-              <li className="mr-6">
-                <Link
-                  href="/sign-in/"
-                  className="border-none text-gray-700 hover:text-gray-900"
-                >
-                  Sign in
-                </Link>
-              </li>
-
-              <li className="mr-6">
-                <Link
-                  href="/sign-up/"
-                  className="border-none text-gray-700 hover:text-gray-900"
-                >
-                  Sign up
-                </Link>
               </li>
             </ul>
           </nav>
