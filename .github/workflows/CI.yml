@@ -62,13 +62,13 @@ jobs:
         run: pnpm run test # Use pnpm instead of npm
 
       - name: Install Playwright (used for Storybook and E2E tests)
-        run: pnpx playwright install --with-deps
+        run: pnpm exec playwright install --with-deps
 
       - name: Run storybook tests
         run: pnpm run test-storybook:ci # Use pnpm instead of npm
 
       - name: Run E2E tests
-        run: pnpx exec percy exec -- pnpm run test:e2e # Use pnpm instead of npm
+        run: pnpm exec percy exec -- pnpm run test:e2e # Use pnpm instead of npm
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
