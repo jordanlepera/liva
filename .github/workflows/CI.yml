@@ -46,6 +46,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "pnpm" # Set cache to pnpm
+      - run: pnpm install
 
       - if: github.event_name == 'pull_request'
         name: Validate all commits from PR
