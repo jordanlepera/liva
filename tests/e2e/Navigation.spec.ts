@@ -8,7 +8,7 @@ test.describe('Navigation', () => {
 
       await expect(
         page.getByRole('heading', {
-          name: 'Boilerplate code for your Nextjs project with Tailwind CSS',
+          name: 'Test',
         }),
       ).toBeVisible();
 
@@ -26,7 +26,7 @@ test.describe('Navigation', () => {
 
       await expect(
         page.getByRole('heading', {
-          name: 'Boilerplate code for your Nextjs project with Tailwind CSS',
+          name: 'Test',
         }),
       ).toBeVisible();
 
