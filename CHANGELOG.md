@@ -1,3 +1,21 @@
+# 1.0.0 (2023-11-07)
+
+
+### Code Refactoring
+
+* **global:** remove useless dependencies & reset boilerplate ([8504331](https://github.com/jordanlepera/liva/commit/8504331b7705b01538a85cee85496da5b477f89b))
+
+
+### Continuous Integration
+
+* **package.json:** set scripts to use pnpm instead of npm ([20773f2](https://github.com/jordanlepera/liva/commit/20773f2f995049b89738b9fbfa3d73cc7fcf9cf0))
+
+
+### BREAKING CHANGES
+
+* **package.json:** pnpm is now the package manager used for this project, npm is no longer used
+* **global:** Removal of authentication and database dependencies
+
 # [3.25.0](https://github.com/ixartz/Next-js-Boilerplate/compare/v3.24.0...v3.25.0) (2023-10-30)
 
 
