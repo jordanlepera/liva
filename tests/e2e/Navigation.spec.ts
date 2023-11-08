@@ -7,12 +7,16 @@ test.describe('Navigation', () => {
       await page.goto('/');
 
       await expect(
-        page.getByRole('heading', {
-          name: 'Test',
+        page.getByRole('img', {
+          name: 'hero liva maçonnerie',
         }),
-      ).toBeVisible();
+      ).toHaveCount(2);
 
-      await page.getByRole('link', { name: 'About' }).click();
+      const links = await page
+        .getByRole('link', { name: 'Nos services' })
+        .all();
+
+      await links[1]?.click();
 
       await expect(page).toHaveURL('/about');
 
@@ -25,10 +29,10 @@ test.describe('Navigation', () => {
       await page.goto('/');
 
       await expect(
-        page.getByRole('heading', {
-          name: 'Test',
+        page.getByRole('img', {
+          name: 'hero liva maçonnerie',
         }),
-      ).toBeVisible();
+      ).toHaveCount(2);
 
       await percySnapshot(page, 'Homepage');
     });
@@ -38,9 +42,9 @@ test.describe('Navigation', () => {
 
       await expect(
         page.getByRole('link', {
-          name: 'About',
+          name: 'Nos services',
         }),
-      ).toBeVisible();
+      ).toHaveCount(2);
 
       await percySnapshot(page, 'About');
     });
