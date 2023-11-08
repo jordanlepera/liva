@@ -24,6 +24,7 @@
   "dependencies": {
     "@hookform/resolvers": "^3.3.2",
     "@t3-oss/env-nextjs": "^0.7.1",
+    "animate.css": "^4.1.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "lucide-react": "^0.292.0",
