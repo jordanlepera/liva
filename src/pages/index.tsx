@@ -1,3 +1,4 @@
+import { Hero } from '@/components/hero/Hero';
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 
@@ -10,7 +11,7 @@ const Index = () => (
       />
     }
   >
-    <h1>Test</h1>
+    <Hero />
   </Main>
 );
 
