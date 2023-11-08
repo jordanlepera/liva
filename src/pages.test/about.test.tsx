@@ -12,7 +12,7 @@ describe('About page', () => {
 
       const paragraph = screen.getAllByText(/Lorem ipsum/);
 
-      expect(paragraph).toHaveLength(2);
+      expect(paragraph).toHaveLength(3);
     });
   });
 });
