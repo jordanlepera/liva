@@ -1,3 +1,13 @@
+# [1.1.0](https://github.com/jordanlepera/liva/compare/v1.0.0...v1.1.0) (2023-11-08)
+
+
+### Features
+
+* **about.tsx:** add a h1 tag ([e7d28f6](https://github.com/jordanlepera/liva/commit/e7d28f6f513a51f263a16d33e9d9859a12f67a3e))
+* **Hero.tsx:** add a new hero component ([0fc7dff](https://github.com/jordanlepera/liva/commit/0fc7dff5a640c08f70c0ffa2af15346f4d2a6b52))
+* **index.tsx:** add hero component in index page ([d64731d](https://github.com/jordanlepera/liva/commit/d64731d4e6d73c0ede702835293349afcc307ac7))
+* **Main.tsx:** new layout with new navigation ([498a6c5](https://github.com/jordanlepera/liva/commit/498a6c5438a537a789ec85d97472143f8ef3ae79))
+
 # 1.0.0 (2023-11-07)
 
 
