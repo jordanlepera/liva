@@ -7,14 +7,12 @@ import Index from '@/pages/index';
 
 describe('Index page', () => {
   describe('Render method', () => {
-    it('should have h1 tag', () => {
+    it('should render the Hero component', () => {
       render(<Index />);
 
-      const heading = screen.getByRole('heading', {
-        name: /Test/,
-      });
+      const hero = screen.getAllByRole('img', { name: 'hero liva maçonnerie' });
 
-      expect(heading).toBeInTheDocument();
+      expect(hero).toHaveLength(2);
     });
   });
 });
