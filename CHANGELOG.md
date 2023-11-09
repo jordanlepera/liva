@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/jordanlepera/liva/compare/v1.1.0...v1.1.1) (2023-11-09)
+
+
+### Bug Fixes
+
+* **Main.tsx:** fix mobile menu opened at start ([093ce63](https://github.com/jordanlepera/liva/commit/093ce63c3ddde775a2ba42464997192377c11f13))
+
 # [1.1.0](https://github.com/jordanlepera/liva/compare/v1.0.0...v1.1.0) (2023-11-08)
 
 
