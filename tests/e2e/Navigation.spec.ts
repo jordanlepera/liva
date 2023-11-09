@@ -12,11 +12,7 @@ test.describe('Navigation', () => {
         }),
       ).toHaveCount(2);
 
-      const links = await page
-        .getByRole('link', { name: 'Nos services' })
-        .all();
-
-      await links[0]?.click();
+      await page.getByRole('link', { name: 'Nos services' }).click();
 
       await expect(page).toHaveURL('/about');
 
@@ -44,7 +40,7 @@ test.describe('Navigation', () => {
         page.getByRole('link', {
           name: 'Nos services',
         }),
-      ).toHaveCount(2);
+      ).toHaveCount(1);
 
       await percySnapshot(page, 'About');
     });
