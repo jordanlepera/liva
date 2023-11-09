@@ -16,7 +16,7 @@ test.describe('Navigation', () => {
         .getByRole('link', { name: 'Nos services' })
         .all();
 
-      await links[1]?.click();
+      await links[0]?.click();
 
       await expect(page).toHaveURL('/about');
 
