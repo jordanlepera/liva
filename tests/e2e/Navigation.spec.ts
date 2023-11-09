@@ -5,6 +5,7 @@ test.describe('Navigation', () => {
   test.describe('Static pages', () => {
     test('should navigate to the about page', async ({ page }) => {
       await page.goto('/');
+      await page.waitForURL('/');
 
       await expect(
         page.getByRole('img', {
@@ -13,6 +14,7 @@ test.describe('Navigation', () => {
       ).toHaveCount(2);
 
       await page.getByRole('link', { name: 'Nos services' }).click();
+      await page.waitForURL('/about');
 
       await expect(page).toHaveURL('/about');
 
@@ -23,6 +25,7 @@ test.describe('Navigation', () => {
 
     test('should take screenshot of the homepage', async ({ page }) => {
       await page.goto('/');
+      await page.waitForURL('/');
 
       await expect(
         page.getByRole('img', {
