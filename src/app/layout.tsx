@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   icons: [
     {
       rel: 'apple-touch-icon',
-      url: '/apple-touch-icon.png',
+      url: '/apple-touch-icon.svg',
     },
     {
       rel: 'icon',
