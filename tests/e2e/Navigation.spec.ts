@@ -13,7 +13,9 @@ test.describe('Navigation', () => {
         }),
       ).toHaveCount(2);
 
-      await page.getByRole('link', { name: 'Nos services' }).click();
+      await page
+        .getByRole('link', { name: 'Nos services' })
+        .dispatchEvent('click');
       await page.waitForURL('/about');
 
       await expect(page).toHaveURL('/about');
