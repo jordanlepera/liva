@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { defineConfig, devices } from '@playwright/test';
 
-// Use process.env.PORT by default and fallback to port 3000
+// Use process.env.PORT by default and fallback to port 3001
 const PORT = process.env.PORT || 3000;
 
 // Set webServer.url and use.baseURL with the location of the WebServer respecting the correct set port
@@ -25,12 +25,32 @@ export default defineConfig({
   // Limit the number of failures on CI to save resources
   maxFailures: process.env.CI ? 10 : undefined,
   // Reporter to use. See https://playwright.dev/docs/test-reporters
-  reporter: process.env.CI ? 'github' : 'list',
+  reporter: process.env.CI
+    ? 'github'
+    : [
+        [
+          'playwright-html',
+          {
+            testFolder: 'tests/e2e',
+            title: 'Playwright HTML Report',
+            project: 'liva',
+            release: '1.1.1',
+            testEnvironment: 'DEV',
+            embedAssets: true,
+            embedAttachments: true,
+            outputFolder: 'playwright-html-report',
+            minifyAssets: true,
+            startServer: true,
+          },
+        ],
+        ['html', { open: 'never' }],
+        ['list'],
+      ],
 
   // Run your local dev server before starting the tests:
   // https://playwright.dev/docs/test-advanced#launching-a-development-web-server-during-the-tests
   webServer: {
-    command: 'npm run dev',
+    command: 'pnpm run dev',
     url: baseURL,
     timeout: 120 * 1000,
     reuseExistingServer: !process.env.CI,
