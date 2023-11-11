@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/jordanlepera/liva/compare/v1.2.0...v1.2.1) (2023-11-11)
+
+
+### Bug Fixes
+
+* **Main.tsx:** fix mobile menu close animation bug + integrate footer component ([2c06894](https://github.com/jordanlepera/liva/commit/2c0689407632d4975be7d10857d16a47ddc3eb64))
+
 # [1.2.0](https://github.com/jordanlepera/liva/compare/v1.1.1...v1.2.0) (2023-11-11)
 
 
