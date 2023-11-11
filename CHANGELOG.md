@@ -1,3 +1,12 @@
+# [1.2.0](https://github.com/jordanlepera/liva/compare/v1.1.1...v1.2.0) (2023-11-11)
+
+
+### Features
+
+* **contact.tsx:** create empty contact page ([cd98d45](https://github.com/jordanlepera/liva/commit/cd98d45c542c08e687f8a9601c27e8e2077c2998))
+* **galerie.tsx:** create galerie page containing a mansory grid of photo ([f05bf2c](https://github.com/jordanlepera/liva/commit/f05bf2cd5956c42902fc52dd5dc9567fbee5215e))
+* **Hero.tsx:** add caption text and call to action button to hero component ([60dbd47](https://github.com/jordanlepera/liva/commit/60dbd478a87e60fa9a255f306672860507cbe489))
+
 ## [1.1.1](https://github.com/jordanlepera/liva/compare/v1.1.0...v1.1.1) (2023-11-09)
 
 
