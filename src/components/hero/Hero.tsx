@@ -48,14 +48,19 @@ const Hero = () => {
         );
       })}
       <div className="absolute top-64 z-10 flex w-full flex-col justify-center md:top-64">
-        <div className="text-lg font-extrabold md:text-5xl">
-          <h1 className="text-center text-white">
+        <div className="text-xl font-extrabold md:text-5xl">
+          {/* eslint-disable-next-line tailwindcss/no-custom-classname */}
+          <h1 className="animate__animated animate__fadeInDown text-center text-white">
             Construisons l&apos;avenir, pierre par pierre.
             <br />
             Votre vision, notre expertise.
           </h1>
         </div>
-        <Link href="/contact" className="mx-auto mt-8">
+        <Link
+          href="/contact"
+          /* eslint-disable-next-line tailwindcss/no-custom-classname */
+          className="animate__animated animate__fadeIn animate__delay-1s mx-auto mt-8"
+        >
           <button
             type="button"
             className="rounded-sm bg-red-700 p-4 text-base font-bold uppercase text-white transition-all hover:bg-red-600 md:text-lg"
