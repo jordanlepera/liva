@@ -5,8 +5,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 
+import { Footer } from '@/components/Footer';
 import logo from '@/public/assets/images/liva-logo-inline.svg';
-import { AppConfig } from '@/utils/AppConfig';
 
 type IMainProps = {
   meta?: ReactNode;
@@ -56,7 +56,7 @@ function openMenu() {
   };
 }
 
-function closeMenu() {
+function closeMenuWithTransition() {
   document.getElementById('menu')?.classList.toggle('animate__fadeInLeftBig');
   document.getElementById('menu')?.classList.toggle('animate__fadeOutLeftBig');
   hideMenuTimeout = setTimeout(() => {
@@ -71,6 +71,12 @@ function closeMenu() {
       clearTimeout(hideMenuTimeout);
     }
   };
+}
+
+function closeMenuWithoutTransition() {
+  document.getElementById('menu')?.classList.toggle('animate__fadeInLeftBig');
+  document.getElementById('menu')?.classList.toggle('block');
+  document.getElementById('menu')?.classList.toggle('hidden');
 }
 
 const Main = (props: IMainProps) => (
@@ -120,9 +126,7 @@ const Main = (props: IMainProps) => (
 
       <main className="text-xl">{props.children}</main>
 
-      <footer className="border-t border-gray-300 py-8 text-center text-sm">
-        © Copyright {new Date().getFullYear()} {AppConfig.title}
-      </footer>
+      <Footer />
       <nav
         id="menu"
         // eslint-disable-next-line tailwindcss/no-custom-classname
@@ -130,7 +134,7 @@ const Main = (props: IMainProps) => (
       >
         <button
           className="absolute right-4 top-4 flex flex-col items-center justify-center"
-          onClick={() => closeMenu()}
+          onClick={() => closeMenuWithTransition()}
           type="button"
         >
           <X />
@@ -138,7 +142,7 @@ const Main = (props: IMainProps) => (
         </button>
         <ul className="flex h-full flex-col items-center justify-center">
           <div className="mb-8 max-w-[70%]">
-            <Link href="/" onClick={() => closeMenu()}>
+            <Link href="/" onClick={() => closeMenuWithoutTransition()}>
               <Image src={logo} alt="Liva Maçonnerie" priority />
             </Link>
           </div>
@@ -149,7 +153,7 @@ const Main = (props: IMainProps) => (
                   href={item.href}
                   className="border-none uppercase text-gray-700 hover:text-gray-900"
                   target={item.target}
-                  onClick={() => closeMenu()}
+                  onClick={() => closeMenuWithoutTransition()}
                 >
                   {item.text}
                 </Link>
