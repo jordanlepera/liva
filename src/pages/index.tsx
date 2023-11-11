@@ -7,7 +7,7 @@ const Index = () => (
     meta={
       <Meta
         title="Liva Maçonnerie"
-        description="Liva Maçonnerie, votre entreprise spécialisée dans la maçonnerie générale."
+        description="Votre entreprise spécialisée dans la maçonnerie générale."
       />
     }
   >
