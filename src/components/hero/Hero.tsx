@@ -3,6 +3,7 @@
 import 'animate.css';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 import hero from '@/public/assets/images/hero.jpg';
@@ -39,14 +40,30 @@ const Hero = () => {
             alt="hero liva maçonnerie"
             loading="lazy"
             fill
-            sizes="100vw"
             // eslint-disable-next-line tailwindcss/no-custom-classname
-            className={`animate__animated overflow-hidden object-cover object-top ${
+            className={`animate__animated overflow-hidden object-cover object-top brightness-50 ${
               sliderIndex === index ? 'animate__fadeIn' : 'animate__fadeOut'
             }`}
           />
         );
       })}
+      <div className="absolute top-64 z-10 flex w-full flex-col justify-center md:top-64">
+        <div className="text-lg font-extrabold md:text-5xl">
+          <h1 className="text-center text-white">
+            Construisons l&apos;avenir, pierre par pierre.
+            <br />
+            Votre vision, notre expertise.
+          </h1>
+        </div>
+        <Link href="/contact" className="mx-auto mt-8">
+          <button
+            type="button"
+            className="rounded-sm bg-red-700 p-4 text-base font-bold uppercase text-white transition-all hover:bg-red-600 md:text-lg"
+          >
+            Contactez nous
+          </button>
+        </Link>
+      </div>
     </div>
   );
 };
