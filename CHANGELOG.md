@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/jordanlepera/liva/compare/v1.2.1...v1.3.0) (2023-11-11)
+
+
+### Features
+
+* **Hero.tsx:** add animation on caption and call to action button ([645d47f](https://github.com/jordanlepera/liva/commit/645d47f59add2cfd3295cb8171892e3d804f51d5))
+
 ## [1.2.1](https://github.com/jordanlepera/liva/compare/v1.2.0...v1.2.1) (2023-11-11)
 
 
