@@ -22,15 +22,7 @@ const Hero = () => {
   }, [sliderIndex]);
 
   return (
-    <div
-      style={{
-        position: 'relative',
-        overflow: 'hidden',
-        maxHeight: '70vh',
-        height: '70vh',
-      }}
-      className="w-full xl:h-[70vh] xl:max-h-[70vh]"
-    >
+    <div className="relative h-[50vh] w-full overflow-hidden p-16 md:h-[60vh] xl:h-[70vh] xl:max-h-[70vh]">
       {sliderImages.map((image, index) => {
         return (
           <Image
@@ -47,7 +39,7 @@ const Hero = () => {
           />
         );
       })}
-      <div className="absolute top-64 z-10 flex w-full flex-col justify-center md:top-64">
+      <div className="relative z-10 flex h-full w-full flex-col items-center justify-center">
         <div className="text-xl font-extrabold md:text-5xl">
           {/* eslint-disable-next-line tailwindcss/no-custom-classname */}
           <h1 className="animate__animated animate__fadeInDown text-center text-white">
