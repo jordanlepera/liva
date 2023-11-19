@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/jordanlepera/liva/compare/v1.3.0...v1.4.0) (2023-11-19)
+
+
+### Features
+
+* **contact form:** create a new contact component integrated in contact and home page ([17eb8a1](https://github.com/jordanlepera/liva/commit/17eb8a16f03368f908a34b81e6d395c13041aa95))
+
 # [1.3.0](https://github.com/jordanlepera/liva/compare/v1.2.1...v1.3.0) (2023-11-11)
 
 
