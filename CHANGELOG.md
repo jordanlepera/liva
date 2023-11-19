@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/jordanlepera/liva/compare/v1.4.0...v1.4.1) (2023-11-19)
+
+
+### Bug Fixes
+
+* **Main.tsx:** fix mobile menu not staying fix ([f2508d0](https://github.com/jordanlepera/liva/commit/f2508d033b772c35cafa55e3d8a56c8b318ef18f))
+
 # [1.4.0](https://github.com/jordanlepera/liva/compare/v1.3.0...v1.4.0) (2023-11-19)
 
 
