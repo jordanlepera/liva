@@ -84,7 +84,7 @@ const Main = (props: IMainProps) => (
     {props.meta}
 
     <div className="mx-auto">
-      <header className="sticky top-0 z-50 border-b border-stone-300/30 bg-stone-100/30 backdrop-blur-xl">
+      <header className="sticky top-0 z-40 border-b border-stone-300/30 bg-stone-100/30 backdrop-blur-xl">
         <div>
           <nav className="flex items-center justify-between py-4">
             <div className="px-8">
@@ -130,7 +130,7 @@ const Main = (props: IMainProps) => (
       <nav
         id="menu"
         // eslint-disable-next-line tailwindcss/no-custom-classname
-        className="animate__animated animate__faster fixed left-0 top-0 z-10 hidden h-full w-full bg-stone-300"
+        className="animate__animated animate__faster fixed left-0 top-0 z-50 hidden h-full w-full bg-stone-300"
       >
         <button
           className="absolute right-4 top-4 flex flex-col items-center justify-center"
