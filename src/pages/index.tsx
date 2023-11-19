@@ -1,3 +1,4 @@
+import Contact from '@/components/contact/Contact';
 import { Hero } from '@/components/hero/Hero';
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
@@ -12,6 +13,9 @@ const Index = () => (
     }
   >
     <Hero />
+    <main className="flex flex-col items-center justify-center bg-white p-24">
+      <Contact />
+    </main>
   </Main>
 );
 

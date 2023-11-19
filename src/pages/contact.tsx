@@ -1,7 +1,8 @@
+import Contact from '@/components/contact/Contact';
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 
-const Contact = () => (
+const ContactPage = () => (
   <Main
     meta={<Meta title="Contactez nous" description="Formulaire de contact" />}
   >
@@ -9,9 +10,11 @@ const Contact = () => (
       <h1 className="w-full text-center text-xl font-bold md:text-4xl">
         Contactez nous
       </h1>
-      TO DO
+      <main className="flex flex-col items-center justify-center bg-white p-24">
+        <Contact />
+      </main>
     </div>
   </Main>
 );
 
-export default Contact;
+export default ContactPage;
