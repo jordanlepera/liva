@@ -3,7 +3,6 @@
 import 'animate.css';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
 
 import hero from '@/public/assets/images/hero.jpg';
@@ -30,10 +29,10 @@ const Hero = () => {
             id="hero-slider"
             src={image}
             alt="hero liva maçonnerie"
-            loading="lazy"
+            sizes="100vw"
             fill
             // eslint-disable-next-line tailwindcss/no-custom-classname
-            className={`animate__animated overflow-hidden object-cover object-top brightness-50 ${
+            className={`animate__animated overflow-hidden object-cover object-top brightness-[0.40] ${
               sliderIndex === index ? 'animate__fadeIn' : 'animate__fadeOut'
             }`}
           />
@@ -48,18 +47,18 @@ const Hero = () => {
             Votre vision, notre expertise.
           </h1>
         </div>
-        <Link
-          href="/contact"
+        <button
+          type="button"
           /* eslint-disable-next-line tailwindcss/no-custom-classname */
-          className="animate__animated animate__fadeIn animate__delay-1s mx-auto mt-8"
+          className="animate__animated animate__fadeIn animate__delay-1s mx-auto mt-8 rounded-sm bg-red-700 p-4 text-base font-bold uppercase text-white transition-all hover:bg-red-600 md:text-lg"
+          onClick={() =>
+            document
+              .getElementById('contact_index')
+              ?.scrollIntoView({ behavior: 'smooth' })
+          }
         >
-          <button
-            type="button"
-            className="rounded-sm bg-red-700 p-4 text-base font-bold uppercase text-white transition-all hover:bg-red-600 md:text-lg"
-          >
-            Contactez nous
-          </button>
-        </Link>
+          Contactez nous
+        </button>
       </div>
     </div>
   );
