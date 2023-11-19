@@ -14,7 +14,12 @@ const Index = () => (
   >
     <Hero />
     <main className="flex flex-col items-center justify-center bg-white p-8">
-      <Contact />
+      <section id="contact_index">
+        <h1 className="mb-8 text-center text-4xl font-bold text-gray-800">
+          Contactez nous !
+        </h1>
+        <Contact />
+      </section>
     </main>
   </Main>
 );
