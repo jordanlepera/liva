@@ -84,7 +84,7 @@ const Main = (props: IMainProps) => (
     {props.meta}
 
     <div className="mx-auto">
-      <header className="sticky top-0 z-10 border-b border-stone-300/30 bg-stone-100/30 backdrop-blur-xl">
+      <header className="sticky top-0 z-50 border-b border-stone-300/30 bg-stone-100/30 backdrop-blur-xl">
         <div>
           <nav className="flex items-center justify-between py-4">
             <div className="px-8">
