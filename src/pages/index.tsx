@@ -13,7 +13,7 @@ const Index = () => (
     }
   >
     <Hero />
-    <main className="flex flex-col items-center justify-center bg-white p-24">
+    <main className="flex flex-col items-center justify-center bg-white p-8">
       <Contact />
     </main>
   </Main>
