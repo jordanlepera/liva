@@ -1,3 +1,11 @@
+## [1.4.2](https://github.com/jordanlepera/liva/compare/v1.4.1...v1.4.2) (2023-11-19)
+
+
+### Bug Fixes
+
+* **Main.tsx:** fix conflicting z-index between mobile menu and menu bar ([03cbee1](https://github.com/jordanlepera/liva/commit/03cbee171b829952520747838e4f1445271fabd4))
+* **Main.tsx:** fix desktop top menu bar z-index to be always on top ([6803160](https://github.com/jordanlepera/liva/commit/680316059cd0a38e213206f6615f29758121120a))
+
 ## [1.4.1](https://github.com/jordanlepera/liva/compare/v1.4.0...v1.4.1) (2023-11-19)
 
 
