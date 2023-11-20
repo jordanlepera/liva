@@ -6,10 +6,10 @@ import Image from 'next/image';
 import React, { Suspense } from 'react';
 
 import { Loading } from '@/components/loading/Loading';
-import hero from '@/public/assets/images/hero.jpg';
-import hero2 from '@/public/assets/images/hero-2.jpg';
+import hero2 from '@/public/assets/images/hero/hero-4.avif';
+import hero1 from '@/public/assets/images/hero/hero-5.avif';
 
-const sliderImages = [hero.src, hero2.src];
+const sliderImages = [hero1.src, hero2.src];
 
 const Hero = () => {
   const [sliderIndex, setSliderIndex] = React.useState<number>(0);
