@@ -1,3 +1,10 @@
+## [1.5.2](https://github.com/jordanlepera/liva/compare/v1.5.1...v1.5.2) (2023-11-20)
+
+
+### Bug Fixes
+
+* **public/assets/hero:** fix image format not supported (avif => webp) ([613b42e](https://github.com/jordanlepera/liva/commit/613b42ef7292d6a87a3ad70804c3452e8e5613be))
+
 ## [1.5.1](https://github.com/jordanlepera/liva/compare/v1.5.0...v1.5.1) (2023-11-20)
 
 
