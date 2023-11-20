@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/jordanlepera/liva/compare/v1.5.0...v1.5.1) (2023-11-20)
+
+
+### Bug Fixes
+
+* **public/images/hero:** fix image format not supported by netlify (avif 10bit => webp) ([b6b5c79](https://github.com/jordanlepera/liva/commit/b6b5c7929b9ebc1f2a556cfcc72b333576d215f6))
+
 # [1.5.0](https://github.com/jordanlepera/liva/compare/v1.4.2...v1.5.0) (2023-11-19)
 
 
