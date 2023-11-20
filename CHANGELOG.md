@@ -1,3 +1,15 @@
+# [1.5.0](https://github.com/jordanlepera/liva/compare/v1.4.2...v1.5.0) (2023-11-19)
+
+
+### Features
+
+* **Loading.tsx:** new loading animation component ([475662e](https://github.com/jordanlepera/liva/commit/475662e3fe8df59ee2c69dd02484674d9205fa63))
+
+
+### Performance Improvements
+
+* **Hero.tsx:** add suspense to support carousel images loading ([e53d0fd](https://github.com/jordanlepera/liva/commit/e53d0fdd7e359e58de722322923fd42d4a300350))
+
 ## [1.4.2](https://github.com/jordanlepera/liva/compare/v1.4.1...v1.4.2) (2023-11-19)
 
 
