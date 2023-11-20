@@ -95,8 +95,7 @@ button,
 .spinner {
   width: 40px;
   height: 40px;
-
-  margin: 100px auto;
+  background-color: #333;
   -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
   animation: sk-rotateplane 1.2s infinite ease-in-out;
 }
