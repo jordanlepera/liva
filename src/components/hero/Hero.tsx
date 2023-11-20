@@ -7,7 +7,7 @@ import React, { Suspense } from 'react';
 
 import { Loading } from '@/components/loading/Loading';
 import hero2 from '@/public/assets/images/hero/hero-4.webp';
-import hero1 from '@/public/assets/images/hero/hero-5.avif';
+import hero1 from '@/public/assets/images/hero/hero-5.webp';
 
 const sliderImages = [hero1.src, hero2.src];
 
