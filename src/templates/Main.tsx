@@ -86,13 +86,13 @@ const Main = (props: IMainProps) => (
     <div className="mx-auto">
       <header className="sticky top-0 z-40 border-b border-stone-300/30 bg-stone-100/30 backdrop-blur-xl">
         <div>
-          <nav className="flex items-center justify-between py-4">
+          <nav className="flex items-center justify-between">
             <div className="px-8">
               <Link href="/">
                 <Image src={logo} alt="Liva Maçonnerie" priority />
               </Link>
             </div>
-            <div className="mx-8 flex flex-col items-center justify-center rounded-sm border-stone-500 transition-all focus:ring focus:ring-stone-300 xl:hidden">
+            <div className="mx-8 flex flex-col items-center justify-center rounded-sm border-stone-500 py-4 transition-all focus:ring focus:ring-stone-300 xl:hidden">
               <button
                 type="button"
                 className="flex flex-col items-center justify-center  border-none text-xs font-bold uppercase text-gray-700 hover:text-gray-900"
@@ -102,21 +102,19 @@ const Main = (props: IMainProps) => (
                 Menu
               </button>
             </div>
-            <ul className="hidden flex-wrap text-xl xl:flex">
+            <ul className="hidden h-full flex-wrap items-center justify-center text-xl xl:flex">
               {menuItems.map((item, index) => {
                 return (
-                  <li
-                    className="mr-6"
+                  <Link
+                    href={item.href}
+                    className="border-none font-bold uppercase text-gray-900"
+                    target={item.target}
                     key={`menu-item-${index + Math.random()}`}
                   >
-                    <Link
-                      href={item.href}
-                      className="border-none uppercase text-gray-700 hover:text-gray-900"
-                      target={item.target}
-                    >
+                    <li className="flex h-full min-h-[3rem] items-center justify-center border-l border-stone-300 p-8 transition-all duration-200 hover:bg-stone-100 hover:text-gray-500">
                       {item.text}
-                    </Link>
-                  </li>
+                    </li>
+                  </Link>
                 );
               })}
             </ul>
