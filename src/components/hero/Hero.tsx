@@ -3,9 +3,8 @@
 import 'animate.css';
 
 import Image from 'next/image';
-import React, { Suspense } from 'react';
+import React from 'react';
 
-import { Loading } from '@/components/loading/Loading';
 import hero2 from '@/public/assets/images/hero/hero-4.webp';
 import hero1 from '@/public/assets/images/hero/hero-5.webp';
 
@@ -17,30 +16,33 @@ const Hero = () => {
   React.useEffect(() => {
     const interval = setInterval(() => {
       setSliderIndex((sliderIndex + 1) % sliderImages.length);
-    }, 5000);
+    }, 7000);
     return () => clearInterval(interval);
   }, [sliderIndex]);
 
   return (
     <div className="relative h-[50vh] w-full overflow-hidden p-16 md:h-[60vh] xl:h-[70vh] xl:max-h-[70vh]">
-      <Suspense fallback={<Loading />}>
-        {sliderImages.map((image, index) => {
-          return (
-            <Image
-              key={`hero-slider-${index + Math.random()}`}
-              id="hero-slider"
-              src={image}
-              alt="hero liva maçonnerie"
-              sizes="100vw"
-              fill
-              // eslint-disable-next-line tailwindcss/no-custom-classname
-              className={`animate__animated overflow-hidden object-cover object-top brightness-[0.40] ${
-                sliderIndex === index ? 'animate__fadeIn' : 'animate__fadeOut'
-              }`}
-            />
-          );
-        })}
-      </Suspense>
+      {sliderImages.map((image, index) => {
+        return (
+          <Image
+            key={`hero-slider-${index + Math.random()}`}
+            id="hero-slider"
+            src={image}
+            alt="hero liva maçonnerie"
+            sizes="100vw"
+            fill
+            priority
+            className="scale-100 overflow-hidden object-cover brightness-[0.40]"
+            style={{
+              zIndex: index === sliderIndex ? 1 : 0,
+              animation:
+                sliderIndex === index
+                  ? 'fadeIn 7s ease-in-out'
+                  : 'zoomInTest 7s, fadeOut 7s ease-in-out',
+            }}
+          />
+        );
+      })}
       <div className="relative z-10 flex h-full w-full flex-col items-center justify-center">
         <div className="text-xl font-extrabold md:text-5xl">
           {/* eslint-disable-next-line tailwindcss/no-custom-classname */}
