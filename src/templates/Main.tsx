@@ -111,7 +111,7 @@ const Main = (props: IMainProps) => (
                     target={item.target}
                     key={`menu-item-${index + Math.random()}`}
                   >
-                    <li className="flex h-full min-h-[3rem] items-center justify-center border-l border-stone-300 p-8 transition-all duration-200 hover:bg-stone-100 hover:text-gray-500">
+                    <li className="flex h-full min-h-[3rem] items-center justify-center border-l border-stone-300/30 p-8 transition-all duration-200 hover:bg-stone-100">
                       {item.text}
                     </li>
                   </Link>
