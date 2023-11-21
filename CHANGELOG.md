@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/jordanlepera/liva/compare/v1.5.2...v1.6.0) (2023-11-21)
+
+
+### Features
+
+* **Contact component:** add contact details + secure phone display ([9a3a626](https://github.com/jordanlepera/liva/commit/9a3a626d2a78ee37a65b5b7468cbfc61cad97377))
+
 ## [1.5.2](https://github.com/jordanlepera/liva/compare/v1.5.1...v1.5.2) (2023-11-20)
 
 
