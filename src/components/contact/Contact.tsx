@@ -66,7 +66,7 @@ const Contact: FC = () => {
       <div>
         <button
           type="submit"
-          className="hover:shadow-form rounded-md bg-stone-500 px-8 py-3 text-base font-semibold text-white outline-none"
+          className="w-full rounded-md bg-stone-500 px-8 py-3 text-base font-semibold text-white outline-none"
         >
           Envoyer
         </button>

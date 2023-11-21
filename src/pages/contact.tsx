@@ -8,9 +8,9 @@ const ContactPage = () => (
   >
     <div className="relative p-8">
       <h1 className="w-full text-center text-xl font-bold md:text-4xl">
-        Contactez nous
+        Contactez nous !
       </h1>
-      <main className="flex flex-col items-center justify-center bg-white p-24">
+      <main className="flex flex-col items-center justify-center bg-white pt-8">
         <Contact />
       </main>
     </div>
