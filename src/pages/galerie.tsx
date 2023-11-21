@@ -3,15 +3,15 @@ import { Suspense } from 'react';
 
 import { Loading } from '@/components/loading/Loading';
 import { Meta } from '@/layouts/Meta';
-import photo6 from '@/public/assets/images/galerie/20220628_192820.jpg';
-import photo1 from '@/public/assets/images/galerie/20230617_072226.jpg';
-import photo2 from '@/public/assets/images/galerie/20230617_090438.jpg';
-import photo3 from '@/public/assets/images/galerie/20231006_110639.jpg';
-import photo5 from '@/public/assets/images/galerie/20231012_145939.jpg';
-import photo4 from '@/public/assets/images/galerie/20231014_105626.jpg';
-import photo7 from '@/public/assets/images/galerie/20231014_121041.jpg';
-import photo9 from '@/public/assets/images/galerie/20231015_145309.jpg';
-import photo8 from '@/public/assets/images/galerie/20231111_121335.jpg';
+import photo6 from '@/public/assets/images/galerie/20220628_192820.webp';
+import photo1 from '@/public/assets/images/galerie/20230617_072226.webp';
+import photo2 from '@/public/assets/images/galerie/20230617_090438.webp';
+import photo3 from '@/public/assets/images/galerie/20231006_110639.webp';
+import photo5 from '@/public/assets/images/galerie/20231012_145939.webp';
+import photo4 from '@/public/assets/images/galerie/20231014_105626.webp';
+import photo7 from '@/public/assets/images/galerie/20231014_121041.webp';
+import photo9 from '@/public/assets/images/galerie/20231015_145309.webp';
+import photo8 from '@/public/assets/images/galerie/20231111_121335.webp';
 import { Main } from '@/templates/Main';
 
 const Galerie = () => (
@@ -23,10 +23,16 @@ const Galerie = () => (
       <Suspense fallback={<Loading />}>
         <div className="relative grid grid-cols-1 gap-4 p-2 pt-8 md:grid-cols-3 md:p-16">
           <div className="grid grid-cols-1 gap-4">
-            <div className="overflow-hidden rounded-lg">
+            <div
+              className="overflow-hidden rounded-lg opacity-0"
+              style={{
+                animation: 'slideInDownAndFadeIn 0.5s ease-in-out',
+                animationDelay: `${0 * 100}ms`,
+                animationFillMode: 'forwards',
+              }}
+            >
               <Image
-                // eslint-disable-next-line tailwindcss/no-custom-classname
-                className="animate__animated animate__fadeIn h-auto max-w-full transition-all duration-500 ease-in-out hover:scale-110"
+                className="h-auto max-w-full transition-all duration-500 hover:scale-110"
                 src={photo1}
                 sizes="100vw"
                 loading="eager"
@@ -34,10 +40,16 @@ const Galerie = () => (
                 alt=""
               />
             </div>
-            <div className="overflow-hidden rounded-lg">
+            <div
+              className="overflow-hidden rounded-lg opacity-0"
+              style={{
+                animation: 'slideInDownAndFadeIn 0.5s ease-in-out',
+                animationDelay: `${1 * 100}ms`,
+                animationFillMode: 'forwards',
+              }}
+            >
               <Image
-                // eslint-disable-next-line tailwindcss/no-custom-classname
-                className="animate__animated animate__fadeIn h-auto max-w-full transition-all duration-500 ease-in-out hover:scale-110"
+                className="h-auto max-w-full transition-all duration-500 hover:scale-110"
                 src={photo2}
                 sizes="100vw"
                 loading="eager"
@@ -45,10 +57,16 @@ const Galerie = () => (
                 alt=""
               />
             </div>
-            <div className="overflow-hidden rounded-lg">
+            <div
+              className="overflow-hidden rounded-lg opacity-0"
+              style={{
+                animation: 'slideInDownAndFadeIn 0.5s ease-in-out',
+                animationDelay: `${2 * 100}ms`,
+                animationFillMode: 'forwards',
+              }}
+            >
               <Image
-                // eslint-disable-next-line tailwindcss/no-custom-classname
-                className="animate__animated animate__fadeIn h-auto max-w-full transition-all duration-500 ease-in-out hover:scale-110"
+                className="h-auto max-w-full transition-all duration-500 hover:scale-110"
                 src={photo3}
                 sizes="100vw"
                 loading="eager"
@@ -58,10 +76,16 @@ const Galerie = () => (
             </div>
           </div>
           <div className="grid gap-4">
-            <div className="overflow-hidden rounded-lg">
+            <div
+              className="overflow-hidden rounded-lg opacity-0"
+              style={{
+                animation: 'slideInDownAndFadeIn 0.5s ease-in-out',
+                animationDelay: `${3 * 100}ms`,
+                animationFillMode: 'forwards',
+              }}
+            >
               <Image
-                // eslint-disable-next-line tailwindcss/no-custom-classname
-                className="animate__animated animate__fadeIn h-auto max-w-full transition-all duration-500 ease-in-out hover:scale-110"
+                className="h-auto max-w-full transition-all duration-500 hover:scale-110"
                 src={photo4}
                 sizes="100vw"
                 loading="eager"
@@ -69,10 +93,16 @@ const Galerie = () => (
                 alt=""
               />
             </div>
-            <div className="overflow-hidden rounded-lg">
+            <div
+              className="overflow-hidden rounded-lg opacity-0"
+              style={{
+                animation: 'slideInDownAndFadeIn 0.5s ease-in-out',
+                animationDelay: `${4 * 100}ms`,
+                animationFillMode: 'forwards',
+              }}
+            >
               <Image
-                // eslint-disable-next-line tailwindcss/no-custom-classname
-                className="animate__animated animate__fadeIn h-auto max-w-full transition-all duration-500 ease-in-out hover:scale-110"
+                className="h-auto max-w-full transition-all duration-500 hover:scale-110"
                 src={photo5}
                 sizes="100vw"
                 loading="eager"
@@ -80,10 +110,16 @@ const Galerie = () => (
                 alt=""
               />
             </div>
-            <div className="overflow-hidden rounded-lg">
+            <div
+              className="overflow-hidden rounded-lg opacity-0"
+              style={{
+                animation: 'slideInDownAndFadeIn 0.5s ease-in-out',
+                animationDelay: `${5 * 100}ms`,
+                animationFillMode: 'forwards',
+              }}
+            >
               <Image
-                // eslint-disable-next-line tailwindcss/no-custom-classname
-                className="animate__animated animate__fadeIn h-auto max-w-full transition-all duration-500 ease-in-out hover:scale-110"
+                className="h-auto max-w-full transition-all duration-500 hover:scale-110"
                 src={photo6}
                 sizes="100vw"
                 loading="eager"
@@ -93,10 +129,16 @@ const Galerie = () => (
             </div>
           </div>
           <div className="grid gap-4">
-            <div className="overflow-hidden rounded-lg">
+            <div
+              className="overflow-hidden rounded-lg opacity-0"
+              style={{
+                animation: 'slideInDownAndFadeIn 0.5s ease-in-out',
+                animationDelay: `${6 * 100}ms`,
+                animationFillMode: 'forwards',
+              }}
+            >
               <Image
-                // eslint-disable-next-line tailwindcss/no-custom-classname
-                className="animate__animated animate__fadeIn h-auto max-w-full transition-all duration-500 ease-in-out hover:scale-110"
+                className="h-auto max-w-full transition-all duration-500 hover:scale-110"
                 src={photo9}
                 sizes="100vw"
                 loading="eager"
@@ -104,10 +146,16 @@ const Galerie = () => (
                 alt=""
               />
             </div>
-            <div className="overflow-hidden rounded-lg">
+            <div
+              className="overflow-hidden rounded-lg opacity-0"
+              style={{
+                animation: 'slideInDownAndFadeIn 0.5s ease-in-out',
+                animationDelay: `${7 * 100}ms`,
+                animationFillMode: 'forwards',
+              }}
+            >
               <Image
-                // eslint-disable-next-line tailwindcss/no-custom-classname
-                className="animate__animated animate__fadeIn h-auto max-w-full transition-all duration-500 ease-in-out hover:scale-110"
+                className="h-auto max-w-full transition-all duration-500 hover:scale-110"
                 src={photo8}
                 sizes="100vw"
                 loading="eager"
@@ -115,10 +163,16 @@ const Galerie = () => (
                 alt=""
               />
             </div>
-            <div className="overflow-hidden rounded-lg">
+            <div
+              className="overflow-hidden rounded-lg opacity-0"
+              style={{
+                animation: 'slideInDownAndFadeIn 0.5s ease-in-out',
+                animationDelay: `${8 * 100}ms`,
+                animationFillMode: 'forwards',
+              }}
+            >
               <Image
-                // eslint-disable-next-line tailwindcss/no-custom-classname
-                className="animate__animated animate__fadeIn h-auto max-w-full transition-all duration-500 ease-in-out hover:scale-110"
+                className="h-auto max-w-full transition-all duration-500 hover:scale-110"
                 src={photo7}
                 sizes="100vw"
                 loading="eager"
@@ -127,35 +181,6 @@ const Galerie = () => (
               />
             </div>
           </div>
-          {/* <div className="grid gap-4">
-          <div className="overflow-hidden rounded-lg">
-            <Image
-              className="h-auto max-w-full transition-all duration-500 ease-in-out hover:scale-110"
-              src={photo1}
-                            sizes="100vw"
-              loading="eager"
-              alt=""
-            />
-          </div>
-          <div className="overflow-hidden rounded-lg">
-            <Image
-              className="h-auto max-w-full transition-all duration-500 ease-in-out hover:scale-110"
-              src={photo1}
-                            sizes="100vw"
-              loading="eager"
-              alt=""
-            />
-          </div>
-          <div className="overflow-hidden rounded-lg">
-            <Image
-              className="h-auto max-w-full transition-all duration-500 ease-in-out hover:scale-110"
-              src={photo1}
-                            sizes="100vw"
-              loading="eager"
-              alt=""
-            />
-          </div>
-        </div> */}
         </div>
       </Suspense>
     </div>
