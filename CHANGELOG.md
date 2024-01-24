@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/jordanlepera/liva/compare/v1.6.0...v1.7.0) (2024-01-24)
+
+
+### Features
+
+* **Home page:** add a new features block on the home page ([73c66e7](https://github.com/jordanlepera/liva/commit/73c66e75f18e31c1cfa27194f9efb5e162a1ec1f))
+
 # [1.6.0](https://github.com/jordanlepera/liva/compare/v1.5.2...v1.6.0) (2023-11-21)
 
 
