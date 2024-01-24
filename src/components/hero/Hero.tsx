@@ -43,7 +43,7 @@ const Hero = () => {
           />
         );
       })}
-      <div className="relative z-10 flex h-full w-full flex-col items-center justify-center">
+      <div className="relative z-10 flex size-full flex-col items-center justify-center">
         <div className="text-xl font-extrabold md:text-5xl">
           {/* eslint-disable-next-line tailwindcss/no-custom-classname */}
           <h1 className="animate__animated animate__fadeInDown text-center text-white">
@@ -59,7 +59,7 @@ const Hero = () => {
           onClick={() =>
             document
               .getElementById('contact_index')
-              ?.scrollIntoView({ behavior: 'smooth' })
+              ?.scrollIntoView({ behavior: 'smooth', block: 'start' })
           }
         >
           Contactez nous
