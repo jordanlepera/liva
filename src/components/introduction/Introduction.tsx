@@ -21,7 +21,7 @@ const Introduction: React.FC = () => {
             sizes="100vw"
           />
         </div>
-        <div className="flex min-h-64 items-center justify-center rounded-br-3xl bg-stone-700 p-20 text-white md:rounded-bl-3xl md:rounded-br-none md:rounded-tl-md">
+        <div className="flex min-h-64 items-center justify-center rounded-br-3xl bg-stone-700 p-12 text-white md:rounded-bl-3xl md:rounded-br-none md:rounded-tl-md">
           Bienvenue chez Liva Maçonnerie, votre partenaire de confiance pour
           tous vos projets de maçonnerie dans le secteur de Belfort et ses
           environs.
@@ -41,7 +41,7 @@ const Introduction: React.FC = () => {
           />
         </div>
       </div>
-      <div className="relative mt-8 flex rounded-t-md bg-stone-100 p-20 text-center font-bold sm:rounded-3xl sm:p-40">
+      <div className="relative mt-8 rounded-t-md bg-stone-100 p-12 sm:rounded-3xl sm:pb-40">
         Chez Liva Maçonnerie, la rénovation est notre passion. Nous comprenons
         l&apos;importance de donner une nouvelle vie à vos espaces, et notre
         équipe qualifiée excelle dans la restauration de bâtiments anciens tout
@@ -59,7 +59,7 @@ const Introduction: React.FC = () => {
           sizes="100vw"
         />
       </div>
-      <div className="flex flex-col justify-center">
+      <div className="mt-[-50px] flex flex-col justify-center rounded-md bg-gradient-to-b from-stone-300">
         <div className="relative bg-stone-800 p-20 text-center text-white md:right-[-150px] md:w-1/2">
           Nos services vont au-delà de la simple maçonnerie. Du coulage de chape
           à la création d&apos;aménagements extérieurs élégants, en passant par
@@ -90,14 +90,7 @@ const Introduction: React.FC = () => {
             sizes="100vw"
           />
         </div>
-        <div className="flex min-h-64 items-center justify-center rounded-br-3xl bg-stone-700 p-20 text-white md:rounded-bl-3xl md:rounded-br-none md:rounded-tl-md">
-          L&apos;isolation est également au cœur de notre engagement envers
-          l&apos;efficacité énergétique et le confort de votre habitat. Nous
-          utilisons des matériaux de haute qualité pour assurer une isolation
-          optimale, contribuant ainsi à la réduction de votre empreinte
-          écologique et à des économies d&apos;énergie significatives.
-        </div>
-        <div className="relative hidden h-auto overflow-hidden md:block md:rounded-br-md md:rounded-tr-3xl">
+        <div className="relative hidden h-auto overflow-hidden md:block md:rounded-bl-3xl md:rounded-tl-md">
           <Image
             src={Block4}
             alt="illustration description liva maçonnerie"
@@ -107,8 +100,15 @@ const Introduction: React.FC = () => {
             sizes="100vw"
           />
         </div>
+        <div className="flex min-h-64 items-center justify-center rounded-br-3xl bg-stone-900 p-12 text-white md:rounded-bl-none md:rounded-br-md md:rounded-tr-3xl">
+          L&apos;isolation est également au cœur de notre engagement envers
+          l&apos;efficacité énergétique et le confort de votre habitat. Nous
+          utilisons des matériaux de haute qualité pour assurer une isolation
+          optimale, contribuant ainsi à la réduction de votre empreinte
+          écologique et à des économies d&apos;énergie significatives.
+        </div>
       </div>
-      <div className="mt-8 rounded-md border border-stone-100 bg-stone-200 p-8">
+      <div className="mx-auto mt-8 flex min-h-[33vh] items-center rounded-b-md bg-gradient-to-t from-stone-200 p-8 pb-12 sm:px-40">
         Chez Liva Maçonnerie, nous comprenons que chaque projet est unique.
         C&apos;est pourquoi nous travaillons en étroite collaboration avec nos
         clients, écoutant attentivement leurs besoins et leurs aspirations.
@@ -123,7 +123,7 @@ const Introduction: React.FC = () => {
         Liva Maçonnerie – où l&apos;excellence prend vie.
       </div>
       <Link href="/galerie">
-        <div className="mx-auto flex w-80 items-center justify-center border-4 border-stone-800 bg-stone-800 p-4 text-3xl text-white transition-all duration-300 hover:cursor-pointer hover:bg-stone-300 hover:text-stone-800">
+        <div className="mx-auto flex w-80 items-center justify-center border-4 border-stone-800 bg-stone-800 p-4 text-3xl text-white transition-all duration-300 hover:cursor-pointer hover:bg-stone-50 hover:text-stone-800">
           Visiter la galerie
         </div>
       </Link>
