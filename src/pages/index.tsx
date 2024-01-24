@@ -1,6 +1,7 @@
 import Contact from '@/components/contact/Contact';
 import { Features } from '@/components/features/Features';
 import { Hero } from '@/components/hero/Hero';
+import { Introduction } from '@/components/introduction/Introduction';
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 
@@ -15,6 +16,7 @@ const Index = () => (
   >
     <Hero />
     <Features />
+    <Introduction />
     <Contact />
   </Main>
 );
