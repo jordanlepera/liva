@@ -11,7 +11,7 @@ const ContactPage = () => (
       />
     }
   >
-    <div className="relative p-8">
+    <div className="relative max-w-[90%]">
       <Contact />
     </div>
   </Main>
