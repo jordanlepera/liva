@@ -128,7 +128,7 @@ const Main = (props: IMainProps) => (
       <nav
         id="menu"
         // eslint-disable-next-line tailwindcss/no-custom-classname
-        className="animate__animated animate__faster fixed left-0 top-0 z-50 hidden h-full w-full bg-stone-300"
+        className="animate__animated animate__faster fixed left-0 top-0 z-50 hidden size-full bg-stone-300"
       >
         <button
           className="absolute right-4 top-4 flex flex-col items-center justify-center"
