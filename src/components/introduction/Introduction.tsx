@@ -42,12 +42,12 @@ const Introduction: React.FC = () => {
         </div>
       </div>
       <div className="relative mt-8 rounded-t-md bg-stone-100 p-12 sm:rounded-3xl sm:pb-40">
-        Chez Liva Maçonnerie, la rénovation est notre passion. Nous comprenons
-        l&apos;importance de donner une nouvelle vie à vos espaces, et notre
-        équipe qualifiée excelle dans la restauration de bâtiments anciens tout
-        intégrant des solutions modernes et durables. Que ce soit pour une
-        rénovation intérieure ou extérieure, nous mettons notre expérience au
-        service de la préservation de votre patrimoine.
+        La rénovation est notre passion. Nous comprenons l&apos;importance de
+        donner une nouvelle vie à vos espaces, et notre équipe qualifiée excelle
+        dans la restauration de bâtiments anciens tout en intégrant des
+        solutions modernes et durables. Que ce soit pour une rénovation
+        intérieure ou extérieure, nous mettons notre expérience au service de la
+        préservation de votre patrimoine.
       </div>
       <div className="relative h-80 sm:top-[-125px] sm:mx-auto sm:w-[90%]">
         <Image
@@ -108,7 +108,7 @@ const Introduction: React.FC = () => {
           écologique et à des économies d&apos;énergie significatives.
         </div>
       </div>
-      <div className="mx-auto mt-8 flex min-h-[33vh] items-center rounded-b-md bg-gradient-to-t from-stone-200 p-8 pb-12 sm:px-40">
+      <div className="mx-auto mt-8 flex min-h-[33vh] items-center rounded-b-md bg-gradient-to-t from-stone-200 p-8 pb-12 font-bold sm:px-40">
         Chez Liva Maçonnerie, nous comprenons que chaque projet est unique.
         C&apos;est pourquoi nous travaillons en étroite collaboration avec nos
         clients, écoutant attentivement leurs besoins et leurs aspirations.
