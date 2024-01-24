@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/jordanlepera/liva/compare/v1.7.0...v1.8.0) (2024-01-24)
+
+
+### Features
+
+* **Introduction.tsx:** home page blocks to describe the company services ([1b240bb](https://github.com/jordanlepera/liva/commit/1b240bb86beef1e7ed436810ca6566c4ed7149aa))
+
 # [1.7.0](https://github.com/jordanlepera/liva/compare/v1.6.0...v1.7.0) (2024-01-24)
 
 
