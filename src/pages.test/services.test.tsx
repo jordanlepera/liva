@@ -12,7 +12,7 @@ describe('Services page', () => {
 
       const paragraph = screen.getAllByText(/pour/);
 
-      expect(paragraph).toHaveLength(3);
+      expect(paragraph).toHaveLength(2);
     });
   });
 });

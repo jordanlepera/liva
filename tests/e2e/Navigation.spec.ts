@@ -16,13 +16,16 @@ test.describe('Navigation', () => {
       await page
         .getByRole('link', { name: 'Nos services' })
         .dispatchEvent('click');
-      await page.waitForURL('/about');
+      await page.waitForURL('/services');
 
-      await expect(page).toHaveURL('/about');
+      await expect(page).toHaveURL('/services');
 
       await expect(
-        page.getByText('Lorem ipsum dolor sit amet', { exact: false }),
-      ).toHaveCount(2);
+        page.getByText(
+          'Parcourez la liste de nos services pour découvrir nos prestations',
+          { exact: false },
+        ),
+      ).toHaveCount(1);
     });
 
     test('should take screenshot of the homepage', async ({ page }) => {
@@ -38,8 +41,8 @@ test.describe('Navigation', () => {
       await percySnapshot(page, 'Homepage');
     });
 
-    test('should take screenshot of the about page', async ({ page }) => {
-      await page.goto('/about');
+    test('should take screenshot of the services page', async ({ page }) => {
+      await page.goto('/services');
 
       await expect(
         page.getByRole('link', {
@@ -47,7 +50,7 @@ test.describe('Navigation', () => {
         }),
       ).toHaveCount(1);
 
-      await percySnapshot(page, 'About');
+      await percySnapshot(page, 'Services');
     });
   });
 });
