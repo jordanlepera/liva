@@ -1,3 +1,27 @@
+# [2.0.0](https://github.com/jordanlepera/liva/compare/v1.8.0...v2.0.0) (2024-04-10)
+
+
+### Bug Fixes
+
+* **config files:** after switching to bun, breaking changes were introduced ([5132cfb](https://github.com/jordanlepera/liva/commit/5132cfb5ee2350ccabbc49ad72990ba742a0e50c))
+* **config files:** switch from commonjs configuration files to es modules files ([4642a14](https://github.com/jordanlepera/liva/commit/4642a14dfee686acfab31253ecb344d13b90207c))
+
+
+### Features
+
+* **codebase:** major upgrade: code refactor, app router migration, seo and metadata, landing page ([f639838](https://github.com/jordanlepera/liva/commit/f63983821cdfd7578e56292425285f35038b2347))
+
+
+### BREAKING CHANGES
+
+* **config files:** Switch to bun package manager and runtime needed to change tailwind and postcss
+config files to be renamed to .cjs (commonjs)
+* **codebase:** Lots of code from boilerplates has been reviewed, and proper code changes for
+complete migration from next.js pages router to app router has been completed. Complete refactor of
+the codebase. Project package manager has been switched from pnpm to bun after bun v.1.1.1 Windows
+support release. Seo and metadata have been updated to latest next.js 14 features and
+recommendations
+
 # [1.8.0](https://github.com/jordanlepera/liva/compare/v1.7.0...v1.8.0) (2024-01-24)
 
 
