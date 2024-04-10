@@ -10,10 +10,11 @@ const {
 module.exports = {
   darkMode: ['class'],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    './pages/**/*.{js,jsx,ts,tsx,mdx}',
+    './components/**/*.{js,jsx,ts,tsx,mdx}',
+    './app/components/**/*.{js,jsx,ts,tsx,mdx}',
+    './app/**/*.{js,jsx,ts,tsx,mdx}',
+    './src/**/*.{js,jsx,ts,tsx,mdx}',
   ],
   theme: {
     container: {
@@ -83,7 +84,7 @@ module.exports = {
   /* eslint-disable global-require */
   plugins: [
     require('tailwindcss-animate'),
-    function ({ matchUtilities, theme }) {
+    ({ matchUtilities, theme }) => {
       matchUtilities(
         {
           'bg-grid': (value) => ({
@@ -111,3 +112,5 @@ module.exports = {
   ],
   /* eslint-enable global-require */
 };
+
+// export default tailwindConfig;

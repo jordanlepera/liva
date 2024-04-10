@@ -2,16 +2,7 @@
 // it will create an unexpected error: Invalid PostCSS Plugin found: [0]
 
 // LEGACY CommonJS Module
-// module.exports = {
-//   plugins: {
-//     tailwindcss: {},
-//     autoprefixer: {},
-//     ...(process.env.NODE_ENV === 'production' ? { cssnano: {} } : {}),
-//   },
-// };
-
-// ESM Module
-const config = {
+module.exports = {
   plugins: {
     tailwindcss: {},
     autoprefixer: {},
@@ -19,4 +10,13 @@ const config = {
   },
 };
 
-export default config;
+// // ESM Module
+// const config = {
+//   plugins: {
+//     tailwindcss: {},
+//     autoprefixer: {},
+//     ...(process.env.NODE_ENV === 'production' ? { cssnano: {} } : {}),
+//   },
+// };
+
+// export default config;
