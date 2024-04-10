@@ -1,3 +1,5 @@
+// LEGACY CODE - PAGE ROUTER
+
 import Head from 'next/head';
 import { NextSeo } from 'next-seo';
 

@@ -1,6 +1,10 @@
 import '@/styles/global.css';
 
 import type { Metadata } from 'next';
+import { Manrope } from 'next/font/google';
+
+import RootLayoutContent from '@/components/rootlayoutcontent/RootLayoutContent';
+import { AppConfig } from '@/utils/AppConfig';
 
 export const metadata: Metadata = {
   icons: [
@@ -25,7 +29,23 @@ export const metadata: Metadata = {
       url: '/favicon.ico',
     },
   ],
+  title: AppConfig.title,
+  description: AppConfig.description,
+  applicationName: AppConfig.title,
+  openGraph: {
+    title: AppConfig.title,
+    description: AppConfig.description,
+    url: 'https://livamaconnerie.netlify.app',
+    locale: AppConfig.locale,
+    siteName: AppConfig.site_name,
+  },
 };
+
+// If loading a variable font, you don't need to specify the font weight
+const manrope = Manrope({
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export default function RootLayout({
   // Layouts must accept a children prop.
@@ -35,8 +55,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang={AppConfig.locale} className={manrope.className}>
+      <body>
+        <RootLayoutContent>{children}</RootLayoutContent>
+      </body>
     </html>
   );
 }

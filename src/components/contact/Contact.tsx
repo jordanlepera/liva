@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import type { FC } from 'react';
+import React from 'react';
 import { useForm } from 'react-hook-form';
 
 import { sendEmail } from '@/lib/send-email';
@@ -15,23 +16,35 @@ export type FormData = {
 
 const phoneNum = '07 66 30 29 65';
 
-let displayPrivateData = false;
+// let displayPrivateData = false;
 
 const Contact: FC = () => {
+  const [displayPhoneNumber, setDisplayPhoneNumber] =
+    React.useState<boolean>(false);
   const { register, handleSubmit } = useForm<FormData>();
 
   function onSubmit(data: FormData) {
     sendEmail(data);
   }
 
-  function displayPhoneNumber() {
+  // function displayPhoneNumber() {
+  //   const phone = document.getElementById('phone');
+  //   displayPrivateData = !displayPrivateData;
+  //   if (phone && displayPrivateData === false) {
+  //     phone.innerText = phoneNum;
+  //   } else if (phone && displayPrivateData === true) {
+  //     phone.innerText = 'Cliquez ici pour afficher';
+  //   }
+  // }
+
+  function togglePhoneNumber() {
     const phone = document.getElementById('phone');
-    displayPrivateData = !displayPrivateData;
-    if (phone && displayPrivateData === false) {
+    if (phone && !displayPhoneNumber) {
       phone.innerText = phoneNum;
-    } else if (phone && displayPrivateData === true) {
+    } else if (phone && displayPhoneNumber) {
       phone.innerText = 'Cliquez ici pour afficher';
     }
+    setDisplayPhoneNumber(!displayPhoneNumber);
   }
 
   return (
@@ -66,8 +79,8 @@ const Contact: FC = () => {
                 <button
                   id="phone"
                   type="button"
-                  onClick={() => displayPhoneNumber()}
-                  className="cursor-pointer rounded-md bg-stone-500 px-2 py-1 text-white"
+                  onClick={() => togglePhoneNumber()}
+                  className="cursor-pointer rounded-sm bg-stone-500 px-2 py-1 text-white transition-colors hover:bg-stone-600"
                 >
                   Cliquez ici pour afficher
                 </button>
@@ -129,7 +142,7 @@ const Contact: FC = () => {
               <div>
                 <button
                   type="submit"
-                  className="w-full rounded-md bg-stone-500 px-8 py-3 text-base font-semibold text-white outline-none"
+                  className="w-full rounded-md bg-stone-500 px-8 py-3 text-base font-semibold text-white outline-none transition-colors hover:bg-stone-600"
                 >
                   Envoyer
                 </button>

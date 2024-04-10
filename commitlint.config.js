@@ -1,4 +1,4 @@
-module.exports = {
+const commitlintConfig = {
   extends: ['@commitlint/config-conventional'],
   ignores: [
     (message) =>
@@ -8,3 +8,5 @@ module.exports = {
     (message) => /^Bumps \[.+]\(.+\) from .+ to .+\.$/m.test(message),
   ],
 };
+
+export default commitlintConfig;
