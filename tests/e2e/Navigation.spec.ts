@@ -3,7 +3,7 @@ import { expect, test } from '@playwright/test';
 
 test.describe('Navigation', () => {
   test.describe('Static pages', () => {
-    test('should navigate to the about page', async ({ page }) => {
+    test('should navigate to the services page', async ({ page }) => {
       await page.goto('/');
       await page.waitForURL('/');
 
@@ -13,9 +13,7 @@ test.describe('Navigation', () => {
         }),
       ).toHaveCount(2);
 
-      await page
-        .getByRole('link', { name: 'Nos services' })
-        .dispatchEvent('click');
+      await page.getByTestId('nos-services-nav').dispatchEvent('click');
       await page.waitForURL('/services');
 
       await expect(page).toHaveURL('/services');

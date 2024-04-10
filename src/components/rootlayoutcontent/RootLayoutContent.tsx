@@ -20,29 +20,35 @@ type MenuItem = {
   href: string;
   text: string;
   target?: string;
+  testId: string;
 };
 
 const menuItems: Array<MenuItem> = [
   {
     href: '/',
     text: 'Accueil',
+    testId: 'home-nav',
   },
   {
     href: '/services',
     text: 'Nos services',
+    testId: 'nos-services-nav',
   },
   {
     href: '/galerie',
     text: 'Galerie',
+    testId: 'galerie-nav',
   },
   {
     href: '/contact',
     text: 'Contact',
+    testId: 'contact-nav',
   },
   {
     href: 'https://www.facebook.com/profile.php?id=61551818345356',
     text: 'Facebook',
     target: '_blank',
+    testId: 'facebook-nav',
   },
 ];
 
@@ -111,6 +117,7 @@ const RootLayoutContent = (props: RootLayoutProps) => (
                     className="border-none font-bold uppercase text-gray-900"
                     target={item.target}
                     key={`menu-item-${index + Math.random()}`}
+                    data-testid={item.testId}
                   >
                     <li className="flex h-full min-h-12 items-center justify-center border-l border-stone-300/30 p-8 transition-all duration-200 hover:bg-stone-100">
                       {item.text}

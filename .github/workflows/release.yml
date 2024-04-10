@@ -25,7 +25,7 @@ jobs:
         with:
           bun-version: latest
       - run: bun install
-      - run: HUSKY=0 pnpm install --frozen-lockfile
+      - run: HUSKY=0 bun install --frozen-lockfile
 
       - name: Release
         env:
