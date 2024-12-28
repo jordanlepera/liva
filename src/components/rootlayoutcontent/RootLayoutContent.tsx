@@ -34,11 +34,11 @@ const menuItems: Array<MenuItem> = [
     text: 'Nos services',
     testId: 'nos-services-nav',
   },
-  {
-    href: '/galerie',
-    text: 'Galerie',
-    testId: 'galerie-nav',
-  },
+  // {
+  //   href: '/galerie',
+  //   text: 'Galerie',
+  //   testId: 'galerie-nav',
+  // },
   {
     href: '/contact',
     text: 'Contact',
@@ -130,7 +130,9 @@ const RootLayoutContent = (props: RootLayoutProps) => (
         </div>
       </header>
 
-      <main className="overflow-hidden text-xl">{props.children}</main>
+      <main className="xl:min-h-[calc(100vh - 6rem)] overflow-hidden text-xl">
+        {props.children}
+      </main>
 
       <Footer />
       <nav

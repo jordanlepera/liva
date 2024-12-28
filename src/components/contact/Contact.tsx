@@ -16,26 +16,38 @@ export type FormData = {
 
 const phoneNum = '07 66 30 29 65';
 
-// let displayPrivateData = false;
-
 const Contact: FC = () => {
   const [displayPhoneNumber, setDisplayPhoneNumber] =
     React.useState<boolean>(false);
+  const [isLoading, setIsLoading] = React.useState<boolean>(false);
+  const [statusMessage, setStatusMessage] = React.useState<string>('');
+  const [statusType, setStatusType] = React.useState<'success' | 'error' | ''>(
+    '',
+  );
   const { register, handleSubmit } = useForm<FormData>();
 
-  function onSubmit(data: FormData) {
-    sendEmail(data);
+  async function onSubmit(data: FormData) {
+    setIsLoading(true);
+    setStatusMessage('');
+    setStatusType('');
+    try {
+      const response = await sendEmail(data);
+      const result = await response.json();
+      if (!response.ok) {
+        throw new Error(result.error || "Échec de l'envoi du message");
+      }
+      setStatusMessage(result.message);
+      setStatusType('success');
+    } catch (error) {
+      console.error('Error sending email:', error);
+      setStatusMessage(
+        "Une erreur est survenue lors de l'envoi du message. Veuillez réessayer plus tard.",
+      );
+      setStatusType('error');
+    } finally {
+      setIsLoading(false);
+    }
   }
-
-  // function displayPhoneNumber() {
-  //   const phone = document.getElementById('phone');
-  //   displayPrivateData = !displayPrivateData;
-  //   if (phone && displayPrivateData === false) {
-  //     phone.innerText = phoneNum;
-  //   } else if (phone && displayPrivateData === true) {
-  //     phone.innerText = 'Cliquez ici pour afficher';
-  //   }
-  // }
 
   function togglePhoneNumber() {
     const phone = document.getElementById('phone');
@@ -95,59 +107,79 @@ const Contact: FC = () => {
               </div>
             </div>
             <br />
-            <form onSubmit={handleSubmit(onSubmit)}>
-              <div className="mb-5">
-                <label
-                  htmlFor="name"
-                  className="mb-3 block text-base font-medium text-black"
-                  inputMode="text"
-                >
-                  Nom et prénom
-                  <input
-                    type="text"
-                    placeholder="Nom et prénom"
-                    className="w-full rounded-md border border-gray-300 bg-white p-3 text-base font-medium text-gray-700 outline-none focus:border-stone-500 focus:shadow-md"
-                    {...register('name', { required: true })}
-                  />
-                </label>
+            <div className="col-lg-6 col-md-7">
+              <div className="contact-form">
+                {statusMessage && (
+                  <div
+                    className={`mb-4 rounded-lg p-4 ${
+                      statusType === 'success'
+                        ? 'border border-green-400 bg-green-100 text-green-700'
+                        : 'border border-red-400 bg-red-100 text-red-700'
+                    }`}
+                  >
+                    {statusMessage}
+                  </div>
+                )}
+                <form onSubmit={handleSubmit(onSubmit)}>
+                  <div className="mb-5">
+                    <label
+                      htmlFor="name"
+                      className="mb-3 block text-base font-medium text-black"
+                      inputMode="text"
+                    >
+                      Nom et prénom
+                      <input
+                        type="text"
+                        placeholder="Nom et prénom"
+                        className="w-full rounded-md border border-gray-300 bg-white p-3 text-base font-medium text-gray-700 outline-none focus:border-stone-500 focus:shadow-md"
+                        {...register('name', { required: true })}
+                      />
+                    </label>
+                  </div>
+                  <div className="mb-5">
+                    <label
+                      htmlFor="email"
+                      className="mb-3 block text-base font-medium text-black"
+                    >
+                      Adresse e-mail
+                      <input
+                        type="email"
+                        placeholder="exemple@gmail.com"
+                        className="w-full rounded-md border border-gray-300 bg-white p-3 text-base font-medium text-gray-700 outline-none focus:border-stone-500 focus:shadow-md"
+                        {...register('email', { required: true })}
+                      />
+                    </label>
+                  </div>
+                  <div className="mb-5">
+                    <label
+                      htmlFor="message"
+                      className="mb-3 block text-base font-medium text-black"
+                    >
+                      Message
+                      <textarea
+                        rows={4}
+                        placeholder="Votre message"
+                        className="w-full resize-none rounded-md border border-gray-300 bg-white p-3 text-base font-medium text-gray-700 outline-none focus:border-stone-500 focus:shadow-md"
+                        {...register('message', { required: true })}
+                      />
+                    </label>
+                  </div>
+                  <div>
+                    <button
+                      type="submit"
+                      disabled={isLoading}
+                      className="w-full rounded-md bg-stone-500 px-8 py-3 text-base font-semibold text-white outline-none transition-colors hover:bg-stone-600 disabled:opacity-70"
+                    >
+                      {isLoading ? (
+                        <div className="inline-block size-4 animate-spin rounded-full border-2 border-solid border-current border-r-transparent motion-reduce:animate-[spin_1.5s_linear_infinite]" />
+                      ) : (
+                        'Envoyer'
+                      )}
+                    </button>
+                  </div>
+                </form>
               </div>
-              <div className="mb-5">
-                <label
-                  htmlFor="email"
-                  className="mb-3 block text-base font-medium text-black"
-                >
-                  Adresse e-mail
-                  <input
-                    type="email"
-                    placeholder="exemple@gmail.com"
-                    className="w-full rounded-md border border-gray-300 bg-white p-3 text-base font-medium text-gray-700 outline-none focus:border-stone-500 focus:shadow-md"
-                    {...register('email', { required: true })}
-                  />
-                </label>
-              </div>
-              <div className="mb-5">
-                <label
-                  htmlFor="message"
-                  className="mb-3 block text-base font-medium text-black"
-                >
-                  Message
-                  <textarea
-                    rows={4}
-                    placeholder="Votre message"
-                    className="w-full resize-none rounded-md border border-gray-300 bg-white p-3 text-base font-medium text-gray-700 outline-none focus:border-stone-500 focus:shadow-md"
-                    {...register('message', { required: true })}
-                  />
-                </label>
-              </div>
-              <div>
-                <button
-                  type="submit"
-                  className="w-full rounded-md bg-stone-500 px-8 py-3 text-base font-semibold text-white outline-none transition-colors hover:bg-stone-600"
-                >
-                  Envoyer
-                </button>
-              </div>
-            </form>
+            </div>
           </div>
           <div className="relative hidden h-auto overflow-hidden rounded-lg sm:block">
             <Image

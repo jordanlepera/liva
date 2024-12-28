@@ -1,11 +1,11 @@
 import type { StaticImageData } from 'next/image';
 import React from 'react';
 
-import amenagement_exterieur from '@/public/assets/images/services/amenagement_exterieur.jpg';
-import beton from '@/public/assets/images/services/beton.webp';
-import chape from '@/public/assets/images/services/chape.jpg';
-import gros_oeuvre from '@/public/assets/images/services/gros-oeuvre.jpg';
+import amenagement_exterieur from '@/public/assets/images/services/amenagement-exterieur.webp';
+import beton from '@/public/assets/images/services/coffrage.webp';
+import gros_oeuvre from '@/public/assets/images/services/gros-oeuvre.webp';
 import petite_demolition from '@/public/assets/images/services/petite_demolition.jpg';
+import chape from '@/public/assets/images/services/ragreage.webp';
 
 import { ServiceCard } from '../servicecard/ServiceCard';
 

@@ -10,9 +10,9 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const ContactPage = () => (
-  <div className="relative mx-auto xl:max-w-screen-2xl">
+  <main className="relative mx-auto xl:max-w-screen-2xl">
     <Contact />
-  </div>
+  </main>
 );
 
 export default ContactPage;
