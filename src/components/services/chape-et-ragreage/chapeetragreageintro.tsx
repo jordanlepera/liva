@@ -37,7 +37,7 @@ const ChapeEtRagreageIntro: React.FC = () => {
           Chez <span className="font-semibold">Liva Maçonnerie</span>, nous
           préparons vos sols avec expertise grâce à nos services de chape et
           ragréage. Une base solide est essentielle pour la durabilité et
-          l'esthétique de vos revêtements de sol. Notre équipe assure une
+          l&apos;esthétique de vos revêtements de sol. Notre équipe assure une
           surface parfaitement nivelée et lisse, prête à accueillir le
           revêtement de votre choix.
         </p>

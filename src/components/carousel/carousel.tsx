@@ -31,8 +31,8 @@ export function LivaCarousel(props: LivaCarouselProps) {
       onMouseLeave={plugin.current.reset}
     >
       <CarouselContent>
-        {props.carouselImages.map((image, index) => (
-          <CarouselItem key={index}>
+        {props.carouselImages.map((image) => (
+          <CarouselItem key={image.src}>
             <div className="p-1">
               <Card>
                 <CardContent className="flex items-center justify-center overflow-hidden rounded-md p-0">

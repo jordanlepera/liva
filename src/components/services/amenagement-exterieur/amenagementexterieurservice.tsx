@@ -102,7 +102,7 @@ const AmenagementExterieurService: React.FC = () => {
     <section className="bg-gray-100 px-4 py-16 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <h2 className="mb-8 text-center text-3xl font-extrabold text-gray-900">
-          Nos Services d'Aménagement Extérieur
+          Nos Services d&apos;Aménagement Extérieur
         </h2>
         <div className="space-y-16">
           {services.map((service, index) => (

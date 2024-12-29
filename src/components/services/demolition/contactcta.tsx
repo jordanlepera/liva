@@ -12,8 +12,8 @@ const ContactCTA: React.FC = () => {
         </h2>
         <p className="mb-8 text-lg text-stone-100">
           Prêt à démarrer votre rénovation sur de bonnes bases ? Contactez-nous
-          dès aujourd'hui pour obtenir un devis gratuit pour votre projet de
-          démolition. Nous sommes là pour répondre à toutes vos questions et
+          dès aujourd&apos;hui pour obtenir un devis gratuit pour votre projet
+          de démolition. Nous sommes là pour répondre à toutes vos questions et
           vous aider à planifier les prochaines étapes de votre projet de
           rénovation.
         </p>

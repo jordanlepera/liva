@@ -39,7 +39,6 @@ const Contact: FC = () => {
       setStatusMessage(result.message);
       setStatusType('success');
     } catch (error) {
-      console.error('Error sending email:', error);
       setStatusMessage(
         "Une erreur est survenue lors de l'envoi du message. Veuillez réessayer plus tard.",
       );
@@ -107,8 +106,8 @@ const Contact: FC = () => {
               </div>
             </div>
             <br />
-            <div className="col-lg-6 col-md-7">
-              <div className="contact-form">
+            <div className="md:w-7/12 lg:w-1/2">
+              <div className="rounded-lg bg-white p-6 shadow-lg">
                 {statusMessage && (
                   <div
                     className={`mb-4 rounded-lg p-4 ${

@@ -13,7 +13,7 @@ const AmenagementExterieurIntro: React.FC = () => {
     <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl text-center">
         <h1 className="mb-4 text-4xl font-extrabold text-gray-900">
-          Services d'Aménagement Extérieur
+          Services d&apos;Aménagement Extérieur
         </h1>
         <nav
           className="flex w-full items-center justify-center"
@@ -35,12 +35,12 @@ const AmenagementExterieurIntro: React.FC = () => {
         </nav>
         <p className="mt-4 text-lg text-gray-500">
           Chez <span className="font-semibold">Liva Maçonnerie</span>, nous
-          transformons vos espaces extérieurs enHavens esthétiques et
-          fonctionnels. Nos services d'aménagement extérieur sont conçus pour
-          embellir votre propriété, améliorer votre qualité de vie et augmenter
-          la valeur de votre bien. De la conception à la réalisation, notre
-          équipe d'experts vous accompagne dans la création de l'extérieur de
-          vos rêves.
+          transformons vos espaces extérieurs en Havens esthétiques et
+          fonctionnels. Nos services d&apos;aménagement extérieur sont conçus
+          pour embellir votre propriété, améliorer votre qualité de vie et
+          augmenter la valeur de votre bien. De la conception à la réalisation,
+          notre équipe d&apos;experts vous accompagne dans la création de
+          l&apos;extérieur de vos rêves.
         </p>
       </div>
     </section>
