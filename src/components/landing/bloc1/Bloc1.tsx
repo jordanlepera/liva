@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
 
-import Block1 from '@/public/assets/images/blocks/block1.jpg';
+import Block1 from '@/public/assets/images/blocks/block1-2.jpg';
 // import { ScrollAnimate } from '@/components/scrollanimate/ScrollAnimate';
 
 export const Bloc1: React.FC = () => {

@@ -130,7 +130,7 @@ const RootLayoutContent = (props: RootLayoutProps) => (
         </div>
       </header>
 
-      <main className="overflow-hidden text-xl xl:min-h-[calc(100vh-6rem)]">
+      <main className="grow overflow-hidden text-xl xl:min-h-[calc(100vh-12rem)]">
         {props.children}
       </main>
 

@@ -114,8 +114,8 @@ const AmenagementExterieurService: React.FC = () => {
             >
               <div className="lg:w-1/2">
                 <motion.div
-                  initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: -50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
                 >
                   <Image

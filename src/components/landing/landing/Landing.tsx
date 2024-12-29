@@ -5,7 +5,6 @@ import { Bloc2 } from '../bloc2/Bloc2';
 import { Bloc3 } from '../bloc3/Bloc3';
 import { Bloc4 } from '../bloc4/Bloc4';
 import { Bloc5 } from '../bloc5/Bloc5';
-import { Bloc6 } from '../bloc6/Bloc6';
 
 const Landing: React.FC = () => {
   return (
@@ -27,7 +26,7 @@ const Landing: React.FC = () => {
         </div>
       </div>
       <Bloc5 />
-      <Bloc6 />
+      {/* <Bloc6 /> */}
     </>
   );
 };

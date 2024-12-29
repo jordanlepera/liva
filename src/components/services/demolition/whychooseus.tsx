@@ -5,27 +5,27 @@ import { HiGlobeAlt, HiShieldCheck, HiThumbUp, HiUsers } from 'react-icons/hi';
 
 const features = [
   {
-    name: "Main d'oeuvre Expérimentée",
+    name: "Main d'oeuvre expérimentée",
     description:
-      "Nous sommes experts en démolition avec des années d'expérience, garantissant que chaque travail est réalisé en toute sécurité et efficacement.",
+      "Notre équipe qualifiée possède des années d'expérience dans le domaine, garantissant un travail de qualité et des prestations irréprochables.",
     icon: HiUsers,
   },
   {
-    name: 'Sécurité Avant Tout',
+    name: 'Sécurité avant tout',
     description:
-      'Nous priorisons la sécurité dans chaque projet de démolition, en mettant en place des mesures de contrôle de la poussière, de gestion des débris et des protocoles de sécurité pour protéger à la fois notre équipe et votre propriété.',
+      'Nous priorisons la sécurité dans chaque projet, en mettant en place des mesures de contrôle appropriées pour protéger à la fois notre équipe et votre propriété.',
     icon: HiShieldCheck,
   },
   {
-    name: 'Pratiques Écologiques',
+    name: 'Engagement environnemental',
     description:
-      "Nous sommes engagés dans une démolition respectueuse de l'environnement, en recyclant les matériaux autant que possible et en assurant une élimination appropriée des déchets.",
+      "Nous adoptons une approche éco-responsable dans tous nos projets, en privilégiant des pratiques durables et respectueuses de l'environnement.",
     icon: HiGlobeAlt,
   },
   {
-    name: 'Satisfaction Client',
+    name: 'Satisfaction client',
     description:
-      'Nous travaillons en étroite collaboration avec vous pour comprendre vos besoins et livrer des résultats qui dépassent vos attentes.',
+      'Votre satisfaction est notre priorité. Nous vous accompagnons à chaque étape du projet pour garantir des résultats à la hauteur de vos attentes.',
     icon: HiThumbUp,
   },
 ];
@@ -35,7 +35,7 @@ const WhyChooseUs: React.FC = () => {
     <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl text-center">
         <h2 className="mb-8 text-3xl font-extrabold text-gray-900">
-          Pourquoi Nous Choisir ?
+          Pourquoi nous choisir ?
         </h2>
         <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((feature) => (

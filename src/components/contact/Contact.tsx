@@ -106,8 +106,8 @@ const Contact: FC = () => {
               </div>
             </div>
             <br />
-            <div className="md:w-7/12 lg:w-1/2">
-              <div className="rounded-lg bg-white p-6 shadow-lg">
+            <div className="">
+              <div className="">
                 {statusMessage && (
                   <div
                     className={`mb-4 rounded-lg p-4 ${
