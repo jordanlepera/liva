@@ -47,7 +47,6 @@ export async function POST(request: NextRequest) {
       message: 'Merci de nous avoir contacté. Votre message a bien été envoyé.',
     });
   } catch (err) {
-    console.error('Error sending email:', err);
     return NextResponse.json(
       { error: 'Failed to send email. Please try again later.' },
       { status: 500 },
