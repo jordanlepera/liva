@@ -26,7 +26,7 @@ export async function POST(request: NextRequest) {
     from: process.env.MY_EMAIL,
     to: process.env.MY_EMAIL,
     // cc: email, (uncomment this line if you want to send a copy to the sender)
-    subject: `livamaconnerie.fr - ${name} (${email})`,
+    subject: `livamaconnerie.com - ${name} (${email})`,
     text: message,
   };
 
@@ -36,7 +36,7 @@ export async function POST(request: NextRequest) {
         if (!err) {
           resolve('Email sent');
         } else {
-          reject(err.message);
+          reject(err);
         }
       });
     });
@@ -47,6 +47,10 @@ export async function POST(request: NextRequest) {
       message: 'Merci de nous avoir contacté. Votre message a bien été envoyé.',
     });
   } catch (err) {
-    return NextResponse.json({ error: err }, { status: 500 });
+    console.error('Error sending email:', err);
+    return NextResponse.json(
+      { error: 'Failed to send email. Please try again later.' },
+      { status: 500 },
+    );
   }
 }

@@ -33,6 +33,9 @@ const Contact: FC = () => {
     try {
       const response = await sendEmail(data);
       const result = await response.json();
+      console.log(result);
+      console.log(response);
+      console.log(result.error);
       if (!response.ok) {
         throw new Error(result.error || "Échec de l'envoi du message");
       }
@@ -43,6 +46,8 @@ const Contact: FC = () => {
         "Une erreur est survenue lors de l'envoi du message. Veuillez réessayer plus tard.",
       );
       setStatusType('error');
+      console.log(error);
+      console.log((error as Error).message);
     } finally {
       setIsLoading(false);
     }
