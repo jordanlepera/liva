@@ -11,6 +11,7 @@ import contact from '@/public/assets/images/contact/contact.jpg';
 export type FormData = {
   name: string;
   email: string;
+  phone: string;
   message: string;
 };
 
@@ -147,6 +148,28 @@ const Contact: FC = () => {
                         className="w-full rounded-md border border-gray-300 bg-white p-3 text-base font-medium text-gray-700 outline-none focus:border-stone-500 focus:shadow-md"
                         {...register('email', { required: true })}
                       />
+                    </label>
+                  </div>
+                  <div className="mb-5">
+                    <label
+                      htmlFor="phone"
+                      className="mb-3 block text-base font-medium text-black"
+                    >
+                      Téléphone
+                      <input
+                        type="tel"
+                        placeholder="Votre numéro de téléphone"
+                        className="w-full rounded-md border border-gray-300 bg-white p-3 text-base font-medium text-gray-700 outline-none focus:border-stone-500 focus:shadow-md"
+                        {...register('phone', {
+                          required: 'Le numéro de téléphone est requis',
+                          pattern: {
+                            value:
+                              /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/,
+                            message: 'Numéro de téléphone invalide',
+                          },
+                        })}
+                      />
+                      {/* Consider adding error display: errors.phone && <span className="text-red-500">{errors.phone.message}</span> */}
                     </label>
                   </div>
                   <div className="mb-5">

@@ -25,6 +25,7 @@
     "@radix-ui/react-slot": "^1.1.1",
     "@t3-oss/env-nextjs": "^0.11.1",
     "animate.css": "^4.1.1",
+    "caniuse-lite": "^1.0.30001718",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "embla-carousel-autoplay": "^8.5.1",
