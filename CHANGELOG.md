@@ -1,3 +1,33 @@
+# [2.0.0](https://github.com/jordanlepera/liva/compare/v1.8.0...v2.0.0) (2025-05-14)
+
+
+### Bug Fixes
+
+* **api, components:** correct email subject domain and enhance error handling with improved logging ([3fde20e](https://github.com/jordanlepera/liva/commit/3fde20e349c39c79a345a04390df00d7a46fb4fe))
+* **api, components:** remove unnecessary console logs and improve error handling in email sending process ([169c392](https://github.com/jordanlepera/liva/commit/169c39257c7339341538db9fd54231a949067057))
+* **components:** update images, adjust layout, and improve text semantics across various components ([2830762](https://github.com/jordanlepera/liva/commit/28307629fa6afdfe71ae50aedd587d6d8720938d))
+* **config files:** after switching to bun, breaking changes were introduced ([5132cfb](https://github.com/jordanlepera/liva/commit/5132cfb5ee2350ccabbc49ad72990ba742a0e50c))
+* **config files:** switch from commonjs configuration files to es modules files ([4642a14](https://github.com/jordanlepera/liva/commit/4642a14dfee686acfab31253ecb344d13b90207c))
+* **dependencies:** update package versions for compatibility and stability ([81b4987](https://github.com/jordanlepera/liva/commit/81b4987e1bac5cf4ed96cfaf8529b2f2e7dadae7))
+
+
+### Features
+
+* **codebase:** major upgrade: code refactor, app router migration, seo and metadata, landing page ([f639838](https://github.com/jordanlepera/liva/commit/f63983821cdfd7578e56292425285f35038b2347))
+* **email:** add a new required phone number field in contact form ([2b8ebee](https://github.com/jordanlepera/liva/commit/2b8ebee3c9060e9b09788f77ea853edb81dbbac2))
+* **services:** add new service pages and update existing components for better structure and content ([27148b5](https://github.com/jordanlepera/liva/commit/27148b531cc885baa53648426a0b337b73a820b1))
+
+
+### BREAKING CHANGES
+
+* **config files:** Switch to bun package manager and runtime needed to change tailwind and postcss
+config files to be renamed to .cjs (commonjs)
+* **codebase:** Lots of code from boilerplates has been reviewed, and proper code changes for
+complete migration from next.js pages router to app router has been completed. Complete refactor of
+the codebase. Project package manager has been switched from pnpm to bun after bun v.1.1.1 Windows
+support release. Seo and metadata have been updated to latest next.js 14 features and
+recommendations
+
 # [2.0.0](https://github.com/jordanlepera/liva/compare/v1.8.0...v2.0.0) (2025-01-02)
 
 
